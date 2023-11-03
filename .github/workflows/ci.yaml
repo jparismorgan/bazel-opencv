@@ -1,0 +1,16 @@
+name: ci 
+on: 
+  push:
+    branches:
+     - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Build
+        run: bazel build //...
+        run: bazel build --config=asan //...
+        run: bazel build --config=ubsan //...

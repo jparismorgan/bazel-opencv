@@ -1,0 +1,11 @@
+# Based on https://blog.aspect.dev/bazelrc-flags
+startup --host_jvm_args=-DBAZEL_TRACK_SOURCE_DIRECTORIES=1
+build --incompatible_strict_action_env --nolegacy_external_runfiles --experimental_remote_merkle_tree_cache --experimental_remote_merkle_tree_cache_size=1000 --heap_dump_on_oom --noexperimental_check_output_files --experimental_reuse_sandbox_directories
+
+# Disk cache.
+build --disk_cache=/tmp/disk_cache_bazel-opencv --incompatible_remote_results_ignore_disk --experimental_guard_against_concurrent_changes
+
+# Address sanitizer.
+build:asan --strip=never --copt -O0 --copt -g --sandbox_debug --spawn_strategy=standalone --copt -fno-omit-frame-pointer --linkopt -fsanitize=address --copt -fsanitize=address --copt -DADDRESS_SANITIZER
+# Undefined behavior sanitizer.
+build:ubsan --strip=never --copt -O0 --copt -g --sandbox_debug --spawn_strategy=standalone --copt -fno-omit-frame-pointer --linkopt -fsanitize=undefined --copt -fsanitize=undefined --copt -DADDRESS_SANITIZER
