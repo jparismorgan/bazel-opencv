@@ -13,6 +13,6 @@ cc_binary(
         "hello-opencv.cc",
     ],
     deps = [
-        "@opencv//:opencv-foo",
+        "@opencv//:opencv",
     ],
 )

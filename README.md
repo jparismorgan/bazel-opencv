@@ -1,5 +1,3 @@
-[![Build status](https://github.com/jparismorgan/bazel-opencv/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/jparismorgan/bazel-opencv/actions/workflows/ci.yaml)
-
 ### Build OpenCV C++ with Bazel on an M2 Mac
 This is a sample project to build C++ OpenCV 4.X with Bazel on an M2 Mac.
 
@@ -12,7 +10,7 @@ It is based on this thread, with small modifications: https://stackoverflow.com/
 
 ### Running
 - First run: `brew install ffmpeg`
-- Then you can build OpenCV: `bazel build @opencv//:opencv-foo`
+- Then you can build OpenCV: `bazel build @opencv//:opencv`
 - And you can run a small test program: `bazel run //app:hello-opencv`
 
 ### Contributing

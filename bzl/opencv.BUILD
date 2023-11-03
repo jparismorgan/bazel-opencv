@@ -29,7 +29,7 @@ cc_library(
 )
 
 cmake(
-    name = "opencv-foo",
+    name = "opencv",
     build_args = [
         "-j16",
     ],
