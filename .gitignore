@@ -1,0 +1,28 @@
+# VSCode
+**/.vscode/*
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Bazel directories
+/bazel-*
+
+# General
+*.mp4
+*.avi
+**/.DS_Store
+dist/
+
+# vim hidden files
+*.swp
+*.swo
+*.swn
+
+# ycm hidden files
+.ycm*
+
+# Mac OS
+.DS_Store
+Desktop.ini
+Thumbs.db
+.Spotlight-V100
+.Trashes
