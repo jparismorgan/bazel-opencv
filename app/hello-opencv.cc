@@ -1,6 +1,10 @@
+// Paris Morgan, 2023
+//
+// Hello world example. Example Usage:
+//   - bazel run //app:hello-opencv
+
 #include <iostream>
 #include <opencv2/core/core.hpp>
-
 #include "opencv2/imgproc.hpp"
 
 using namespace cv;

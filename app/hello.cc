@@ -1,7 +1,7 @@
 // Paris Morgan, 2023
 //
 // Hello world example. Example Usage:
-//   - bazel run //bzl/examples:hello
+//   - bazel run //app:hello
 
 #include <iostream>
 

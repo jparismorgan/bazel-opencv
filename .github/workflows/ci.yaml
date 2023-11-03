@@ -5,13 +5,16 @@ on:
      - main
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         
       - name: Build
-        run: |
-          bazel build //...
-          bazel build --config=asan //...
-          bazel build --config=ubsan //...
+        run: bazel build //...
+      
+      - name: Build with asan
+        run: bazel build --config=asan //...
+      
+      - name: Build with ubsan
+        run: bazel build --config=ubsan //...
